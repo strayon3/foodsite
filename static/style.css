@@ -240,4 +240,49 @@ p {
     text-align: center;
     margin-top: 10px;
 }
+/* Container styling for side-by-side alignment */
+.ad-container {
+    display: flex;               /* Enables flexbox for horizontal layout */
+    justify-content: center; /* Align items to the left */
+    gap: 10px;                   /* Add space between the ads */
+    padding: 10px;               /* Optional padding around the container */
+}
 
+/* Individual ad styling */
+.ad-zone2,
+.ad-zone3 {
+    flex: 0 0 auto;              /* Prevent the ads from resizing */
+    width: 300px;                /* Set a fixed width for the ads */
+    height: 250px;               /* Set a fixed height for the ads */
+    background-color: #f1f1f1;   /* Optional background for visualization */
+    border: 1px solid #ccc;      /* Optional border for debugging layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for design */
+}
+/*meal otd ad styles*/
+/* Left CPM Ads */
+.left-ad-container {
+    position: absolute;
+    top: 250px;
+    left: 10px;
+    width: auto; /* Adjust width as needed */
+    height: auto;
+    background-color: white; /* Background for visibility */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Right CPM Ads */
+.right-ad-container {
+    position: absolute;
+    top: 255px;
+    right: 10px;
+    width: auto; /* Adjust width as needed */
+    height: auto;
+    background-color: white; /* Background for visibility */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
