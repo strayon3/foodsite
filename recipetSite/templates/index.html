@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rcipes Home page</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+    <h1>Welcome to Recipes with Strayone</h1>
+    <nav>
+        <a href="/meals_otd.html">Meals of the Day</a>
+        <a href="/random_recipe.html">Random Recipe</a>
+        <a href="/search.html"> Search Recipes</a>
+    </nav>
+
+
+
+    <div class="main-content">
+        <h2>Featured Recipe</h2>
+        
+        {% if recipe %}
+        <div class="recipe-card">
+            <img src="{{ recipe['image'] }}" alt="{{ recipe['title'] }}">
+            <h2>{{ recipe['title'] }}</h2>
+            <!--<p>{{ recipe['summary'][:150] }}...</p>-->
+            <a href="{{ recipe['sourceUrl'] }}" target="_blank">View Full Recipe</a>
+        </div>
+        {% else %}
+        <p>{{ error_message }}</p>
+        {% endif %}
+    </div>
+    
+</body>
+</html>
